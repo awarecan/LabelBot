@@ -136,6 +136,10 @@ module.exports = function(path) {
   } else if (!entityComponent.includes(result.component) && 
       !entityComponent.includes(parts[0].replace('.py', ''))) {
     result.type = 'component';
+  } else if (entityComponent.includes(parts[0].replace('.py', ''))) {
+    result.type = 'platform';
+    result.platform = result.component;
+    result.component = parts[0].replace('.py', '');
   } else {
     result.type = 'platform';
     result.platform = parts[0].replace('.py', '');

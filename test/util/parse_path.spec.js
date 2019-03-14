@@ -114,8 +114,8 @@ describe('parsePath', () => {
   it('detect new component platform structure', () => {
     result = parsePath('homeassistant/components/hue/light.py');
     assert.equal(result.core, false);
-    assert.equal(result.component, 'hue');
-    assert.equal(result.platform, 'light');
+    assert.equal(result.component, 'light');
+    assert.equal(result.platform, 'hue');
     assert.equal(result.type, 'platform');
   });
 });

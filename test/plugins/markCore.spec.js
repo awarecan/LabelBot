@@ -19,7 +19,7 @@ describe('markCore', () => {
   });
 
   it('core component plaftform file', () => {
-    assert.deepEqual(getOutput('mqtt/fan.py'), 'core');
+    assert.deepEqual(getOutput('mqtt/fan.py'), null);
   });
 
   it('non-core component init', () => {
